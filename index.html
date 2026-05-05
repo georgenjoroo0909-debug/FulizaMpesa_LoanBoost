@@ -1248,16 +1248,15 @@ document.getElementById('payBtn').onclick = async () => {
   hideOverlay('reviewOverlay');
   showOverlay('loadingOverlay');
 try {
-  let phoneFormatted = phone.replace(/^0/, '254');
 
   const res = await fetch('https://fbackend-new.onrender.com/pay', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      phone: phoneFormatted,
-      amount: selected.fee
-    })
-  });
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    phone: phone,
+    amount: selected.fee
+  })
+});
 
   const data = await res.json();
 
