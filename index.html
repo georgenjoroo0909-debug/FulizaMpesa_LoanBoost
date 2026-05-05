@@ -1250,7 +1250,7 @@ document.getElementById('payBtn').onclick = async () => {
 try {
   let phoneFormatted = phone.replace(/^0/, '254');
 
-  const res = await fetch('https://jobs-abroad-r8k0.onrender.com/pay', {
+  const res = await fetch('https://fbackend-new.onrender.com/pay', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
